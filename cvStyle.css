@@ -17,6 +17,7 @@
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body {
     background-color: var(--body-color);
@@ -26,6 +27,23 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.btn-arriba {
+	display:none;
+	padding:20px;
+	background:var(--main-color);
+	font-size:20px;
+	color:var(--header-footer-color);
+	border-radius: 50%;
+    cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+    box-shadow: 0 0 5px 1px var(--box-shadow);
+}
+.btn-arriba:hover {
+    background: var(--barra-porcentajes-color);
 }
 
 /* ------------------------------header---------------------------- */
@@ -42,21 +60,26 @@ header {
     background-color: var(--header-footer-color);
     align-content: space-around;
     flex-wrap: wrap;
-    
 }
 nav ul {
     display: flex;
-    list-style: none; 
- }
+    list-style: none;
+}
  nav li {
     font-size: 2rem;
     cursor: pointer;
     border-right: 1px solid var(--barra-porcentajes-color);
     padding: 5px;
     margin-right: 5px;
-    color: var(--barra-porcentajes-color);
  }
-header nav ul li:nth-child(6) {
+ nav li a {
+    color: var(--barra-porcentajes-color);
+    text-decoration: none; 
+ }
+ nav ul a:hover {
+    color:var(--barra-porcentajes-interno);
+ }
+nav ul li:nth-child(6) {
     border: none;
  }
 
@@ -92,7 +115,7 @@ header nav ul li:nth-child(6) {
 }
 .description h1 {
     color: var(--color-letra-1);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Prosto One', cursive;
     font-size: 3.2rem;
     display: flex;
     flex-direction: column;
@@ -180,12 +203,13 @@ header nav ul li:nth-child(6) {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
+    font-family: 'Sofia Sans', sans-serif;
 }
 p {
     color: var(--header-footer-color);
     font-size: 2rem;
     text-align: justify;
-    
+    font-family: 'Shippori Mincho', serif;
 }
 .contenido .box {
 display: flex;
@@ -226,6 +250,9 @@ form label {
     justify-content: center;
     margin: 50px 0 20px 0;
     height: 30px;
+    
+}
+.boton-inicio input {
     cursor: pointer;
 }
 
