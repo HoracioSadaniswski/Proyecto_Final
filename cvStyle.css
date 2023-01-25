@@ -29,23 +29,6 @@ body {
     flex-direction: column;
 }
 
-.btn-arriba {
-	display:none;
-	padding:20px;
-	background:var(--main-color);
-	font-size:20px;
-	color:var(--header-footer-color);
-	border-radius: 50%;
-    cursor:pointer;
-	position: fixed;
-	bottom:20px;
-	right:20px;
-    box-shadow: 0 0 5px 1px var(--box-shadow);
-}
-.btn-arriba:hover {
-    background: var(--barra-porcentajes-color);
-}
-
 /* ------------------------------header---------------------------- */
 header {
     width: 100vw;
@@ -61,25 +44,25 @@ header {
     align-content: space-around;
     flex-wrap: wrap;
 }
-nav ul {
+.navegador ul {
     display: flex;
     list-style: none;
 }
- nav li {
+ .navegador li {
     font-size: 2rem;
     cursor: pointer;
     border-right: 1px solid var(--barra-porcentajes-color);
     padding: 5px;
     margin-right: 5px;
  }
- nav li a {
+ .navegador li a {
     color: var(--barra-porcentajes-color);
     text-decoration: none; 
  }
- nav ul a:hover {
+.navegador ul a:hover {
     color:var(--barra-porcentajes-interno);
  }
-nav ul li:nth-child(6) {
+.navegador ul li:nth-child(6) {
     border: none;
  }
 
@@ -91,6 +74,12 @@ nav ul li:nth-child(6) {
     background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: 1fr 2fr;
+}
+.menu_bar {
+    display: none;
+}
+.responsive-nav {
+    display: none;
 }
 
 /* -------------------lado izquierdo------------------------------ */
@@ -255,7 +244,22 @@ form label {
 .boton-inicio input {
     cursor: pointer;
 }
-
+.btn-arriba {
+	display:none;
+	padding:20px;
+	background:var(--main-color);
+	font-size:20px;
+	color:var(--header-footer-color);
+	border-radius: 50%;
+    cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+    box-shadow: 0 0 5px 1px var(--box-shadow);
+}
+.btn-arriba:hover {
+    background: var(--barra-porcentajes-color);
+}
 /* ----------------------footer---------------------------------- */
 footer {
     width: 100vw;
@@ -280,7 +284,7 @@ footer {
 
 /* -------------------media----------------------------------------- */
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     header {
         margin-top: 0;
     }
@@ -293,11 +297,32 @@ footer {
     }
 }
 
-@media (max-width: 650px) {
-   header {
+@media screen and (max-width: 800px) {
+   .navegador {
     display: none;
    }
-   footer {
-    display: none;
-   }
+
+header {
+    width: 70%;
+    max-width: 1000px;
+    margin-top: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    display: block;
+    flex-direction: none;
+    justify-content: none;
+    height: 100%;
+    background-color: var(--header-footer-color);
+    align-content: none;
+    flex-wrap: none;
+}
+.responsive-nav {
+    display: block;
+    width: 80%;
+    height:100%;
+	left:-100%;
+	margin:0;
+	position: fixed;
+}
+
 }
