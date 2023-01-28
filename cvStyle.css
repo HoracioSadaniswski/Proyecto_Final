@@ -9,7 +9,13 @@
     --line-separator-color: #e4dccf53;
     --barra-porcentajes-color: #00334E;
     --barra-porcentajes-interno:#77ACF1;
-    --hover-color:#77acf18a;
+    --hover-color: #e4dccf90;
+    
+
+    --font-family-title: 'Prosto One', cursive;
+    --font-family-subtitile: 'Source Code Pro', monospace;
+    --font-family-title2: 'Sofia Sans', sans-serif;
+    --font-family-p: 'Shippori Mincho', serif;
 }
 * {
     box-sizing: border-box;
@@ -60,39 +66,21 @@ header .navegador ul li {
 
 header .navegador ul li a {
     color: var(--secondary-color);
-    padding: 20px;
+    padding: 10px;
     display: block;
     text-decoration: none;
     cursor: pointer;
-    
+    font-family: var(--font-family-p);
+    font-weight: bold;
 }
 
 header .navegador ul li a:hover {
-    background: var(--hover-color);
+    box-shadow: 0 0 5px 1px var(--main-color);
 }
 
 .navegador ul .hover-redes a:hover {
     border-top-right-radius: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* -----------------------Contenedor central----------------------- */
 .container {
@@ -127,7 +115,7 @@ header .navegador ul li a:hover {
 }
 .description h1 {
     color: var(--color-letra-1);
-    font-family: 'Prosto One', cursive;
+    font-family: var(--font-family-title);
     font-size: 3.2rem;
     display: flex;
     flex-direction: column;
@@ -142,7 +130,7 @@ header .navegador ul li a:hover {
 }
 .description h3 {
     color: #E8E8E8;
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--font-family-subtitile);
     font-size: 2rem;
     margin-top: 20px;
     text-align: center;
@@ -215,13 +203,13 @@ header .navegador ul li a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: var(--font-family-title2);
 }
 p {
     color: var(--header-footer-color);
     font-size: 2rem;
     text-align: justify;
-    font-family: 'Shippori Mincho', serif;
+    font-family: var(--font-family-p);
 }
 .contenido .box {
 display: flex;
@@ -256,6 +244,24 @@ form label {
     flex-direction: column;
     font-size: 2rem;
     margin-bottom: 20px;
+}
+form label input {
+    height: 30px;
+    margin-top: 10px;
+}
+#btn-send {
+    height: auto;
+    padding: 15px;
+    margin: 25px auto !important;
+    width: 50%;
+    background: var(--hover-color);
+    border-radius: 20px;
+    font-family: var(--font-family-p);
+    font-weight: bold;
+    border: none;
+}
+#btn-send:hover {
+    background: var(--header-footer-color);
 }
 .boton-inicio {
     display: flex;
@@ -300,6 +306,10 @@ footer {
 .social-media figure {
     cursor: pointer;
 }
+.social-media figure:hover {
+    box-shadow: 0 0 5px 1px var(--main-color);
+    border-radius: 50%;
+}
 
 .social-media img {
     width: 50px;
@@ -337,6 +347,7 @@ header .navegador {
     margin: 0;
     position: absolute;
     left: -100%;
+    background: var(--hover-color);
 }
 
 header .navegador ul li {
@@ -345,10 +356,19 @@ header .navegador ul li {
     border-bottom: 1px solid var(--barra-porcentajes-color);
 }
 
+header .navegador ul li a:hover {
+    background-color: var(--header-footer-color);
+    box-shadow: 0 0 5px 1px var(--main-color);
+}
+
+.navegador ul .hover-redes a:hover {
+    border-top-right-radius: 0px;
+}
+
 .menu_bar {
     display: block;
     width: 100%;
-    background: var(--header-footer-color);
+    background: var(--hover-color);
 }
 
 .menu_bar .btn-menu {
@@ -358,7 +378,10 @@ header .navegador ul li {
     text-decoration: none;
     font-weight: bold;
     font-size: 30px;
-    
+    cursor: pointer;
+}
+.menu_bar:hover {
+    background: var(--header-footer-color);
 }
 
 .social-media {
