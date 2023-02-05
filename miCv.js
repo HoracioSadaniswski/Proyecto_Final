@@ -1,3 +1,13 @@
+/* Alert btn-send */
+
+const formulario = document.querySelector ("#form");
+
+formulario.addEventListener('submit', btnOnClick);
+
+function btnOnClick () {
+    alert("Tu consulta será enviada luego de Aceptar")
+};
+
 /* Función btn-arriba */
 $(document).ready(function(){
 
@@ -40,7 +50,4 @@ function main(){
 	});
 
 };
-
-/* Alert btn-send */
-
 
